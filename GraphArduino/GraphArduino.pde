@@ -1,10 +1,8 @@
 /*
-Graph 
- by Thomas Sanchez Lengeling
+Graph by Thomas Sanchez Lengeling
  
  show the incomming values from a FFT sound analyzer.
  */
-
 import java.util.*;
 import java.util.concurrent.*;
 
