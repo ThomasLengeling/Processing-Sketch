@@ -1,8 +1,8 @@
 int Search(int index)  throws MalformedURLException, URISyntaxException, IOException {
 
-  String key = "AIzaSyDOdisznC74G_hz-YCath_samfKgipf5TU";
+  String key = "";
   String qry = "picasso paintings"; // search key word
-  String cx  = "001609494755766729867:ez8fjbajppw";
+  String cx  = "";
   String fileType = "png,jpg";
   //String imgType  = "";
   String searchType = "image";
