@@ -4,6 +4,8 @@ import ddf.minim.analysis.*;
 Minim       minim;
 AudioPlayer jingle;
 FFT         fft;
+
+AudioSample kick;
  
 int sampleRate= 44100;
  
@@ -22,8 +24,8 @@ void setup()
  
   //instancia de la clase minim
   minim = new Minim(this);
-  jingle = minim.loadFile("jingle.mp3", 1024);
-  jingle.loop();
+  kick = minim.loadSample("jingle.mp3", 1024);
+  kick.loop();
   fft = new FFT( jingle.bufferSize(), jingle.sampleRate() );
 }
  
@@ -38,9 +40,9 @@ void draw(){
  
 void findNote() {
  
-  fft.forward(in.left);
-  for (float f = 0; f < sampleRate/2; f++) {
-    max[f] = fft.getFreq(f);
+  fft.forward(jingle.mix);
+  for (int f = 0; f < sampleRate/2; f++) {
+    max[f] = fft.getFreq(float(f));
   }
   
   //valor maximo
@@ -58,7 +60,7 @@ void findNote() {
 void stop()
 {
   //cerrar archivos cuando terminemos de usar
-  in.close();
+  jingle.close();
   minim.stop();
  
   super.stop();

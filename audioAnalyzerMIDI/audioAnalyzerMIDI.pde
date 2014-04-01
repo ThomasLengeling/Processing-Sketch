@@ -48,9 +48,8 @@ void findNote() {
     }
   }
 
-  midi = 69+12*(log((frequency-6)/440));
+  midi = 69 + 12*(log((frequency-6)/440));
   n    = int (midi);
-
 }
 
 void stop() {
