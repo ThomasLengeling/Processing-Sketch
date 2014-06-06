@@ -11,13 +11,17 @@ void setup() {
 
   frame.setOpacity(0.7);
   frame.setVisible(true);
+
+  fill(0, 0);
+  rect(0, 0, width, height);
 }
 
 
 void draw() {
-  noStroke();
-  fill(0, 10);
-  rect(0, 0, width, height);
+  background(0);
+  //noStroke();
+ // fill(0, 100);
+ // rect(0, 0, width, height);
 
   float n  = noise(nVal);
 
@@ -26,6 +30,6 @@ void draw() {
   stroke(0, 250, 200);
   ellipse(width/2.0, height/2.0, 50 + n*100, 50 + n*100);
 
-  nVal+=0.02;
+  // nVal+=0.02;
 }
 
