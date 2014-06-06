@@ -1,0 +1,19 @@
+  void curveSquare(int itX, int itY){
+    beginShape();
+    curveVertex(particles[itX][itY].position().x(), particles[itX][itY].position().y() );
+    curveVertex(particles[itX][itY].position().x(), particles[itX][itY].position().y() );
+    curveVertex(particles[itX - 1][itY].position().x(), particles[itX - 1][itY].position().y() );
+    curveVertex(particles[itX - 2][itY + 1].position().x(), particles[itX -2][itY + 1].position().y() );
+    curveVertex(particles[itX -2][itY + 2].position().x(), particles[itX - 2][itY + 2].position().y() );
+    curveVertex(particles[itX -2][itY + 2].position().x(), particles[itX - 2][itY + 2].position().y() );
+    endShape();
+
+    beginShape();
+    curveVertex(particles[itX][itY].position().x(), particles[itX][itY].position().y() );
+    curveVertex(particles[itX][itY].position().x(), particles[itX][itY].position().y() );
+    curveVertex(particles[itX][itY + 1].position().x(), particles[itX][itY + 1].position().y());
+    curveVertex(particles[itX - 1][itY + 2].position().x(), particles[itX  -1][itY +2].position().y());
+    curveVertex(particles[itX - 2][itY +2].position().x(), particles[itX - 2][itY + 2].position().y() );
+    curveVertex(particles[itX - 2][itY +2].position().x(), particles[itX - 2][itY + 2].position().y() );
+    endShape();
+  }

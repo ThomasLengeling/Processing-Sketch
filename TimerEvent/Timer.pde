@@ -17,11 +17,16 @@ class Timer {
       restart = false;
     }
   }
+  
+  void reStart(){
+      restart = true;
+  }
 
   void update() {
-    if (currentTime - millis() > stepTime) {
+    if ( millis() - currentTime > stepTime) {
       end = true;
       restart = true;
+      println("done");
     }
     else {
       end = false;
